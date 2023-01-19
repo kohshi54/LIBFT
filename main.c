@@ -220,6 +220,66 @@ void ft_strdup_checker(char *str)
 	printf("ft_strdup: %s\n", ft_strdup(str));
 }
 
+void ft_substr_checker(const char *s, int start, int len)
+{
+	printf("%s\n", ft_substr(s, start, len));
+}
+
+void ft_strjoin_checker(const char *s1, const char *s2)
+{
+	printf("%s\n", ft_strjoin(s1, s2));
+}
+
+
+void ft_strtrim_checker(char *s1, char *set)
+{
+	printf("%s\n", ft_strtrim(s1, set));
+}
+
+void ft_split_checker(char *s1, char c)
+{
+	char **test = ft_split(s1, c);
+	// if (!test)
+	// 	return (0);
+	while (*test != NULL)
+	{
+		printf("%s\n", *test);
+		test++;
+	}
+}
+
+void ft_itoa_checker(int c)
+{
+	printf("%s\n", ft_itoa(c));
+}
+
+
+void ft_striteri_checker(char *s)
+{
+	s++;
+	// check later.
+}
+
+void ft_putchar_fd_checker(char c, int fd)
+{
+	ft_putchar_fd(c, fd);
+}
+
+void ft_putstr_fd_checker(char *s, int fd)
+{
+	ft_putstr_fd(s, fd);
+}
+
+void ft_putendl_fd_checker(char *s, int fd)
+{
+	ft_putendl_fd(s, fd);
+}
+
+void ft_putnbr_fd_checker(int n, int fd)
+{
+	ft_putnbr_fd(n, fd);
+}
+
 int main(int argc, char *argv[])
 {
 	if (argc > 1)
@@ -249,7 +309,17 @@ int main(int argc, char *argv[])
 		// ft_strnstr_checker(argv[1], argv[2], atoi(argv[3]));
 		// ft_atoi_checker(argv[1]);
 		// ft_calloc_checker(argv[1]);
-		ft_strdup_checker(argv[1]);
+		// ft_strdup_checker(argv[1]);
+		// ft_substr_checker(argv[1], atoi(argv[2]), atoi(argv[3]));
+		// ft_strjoin_checker(argv[1], argv[2]);
+		// ft_strtrim_checker(argv[1], argv[2]);
+		// ft_split_checker(argv[1], argv[2][0]);
+		// ft_itoa_checker(atoi(argv[1]));
+		// ft_striteri_checker(argv[1]);
+		// ft_putchar_fd_checker(argv[1][0], atoi(argv[2]));
+		// ft_putstr_fd_checker(argv[1], atoi(argv[2]));
+		// ft_putendl_fd_checker(argv[1], atoi(argv[2]));
+		ft_putnbr_fd_checker(atoi(argv[1]), atoi(argv[2]));
 	}
 	return (0);
 }
