@@ -141,12 +141,22 @@ void ft_strlcpy_checker(void *src)
 void ft_strlcat_checker(void *str)
 {
 	str++;
-	char buf1[7] = {'a', 'b', 'c', '\0'};
-	char buf2[7] = {'a', 'b', 'c', '\0'};
-	printf("strlcat: %lu\n", strlcat(buf1, "abcdef", 2));
-	printf("strlcat: %s\n", buf1);
-	printf("strlcat: %lu\n", ft_strlcat(buf2, "abcdef", 2));
-	printf("strlcat: %s\n", buf2);
+	char *src1 = calloc(100, sizeof(char));
+	char *src2 = calloc(100, sizeof(char));
+	for (int i = 0; i < 99; i++)
+	{
+		src1[i] = i + 1;
+		src2[i] = i + 1;
+	}
+	printf("strlcat: %lu\n", strlcat(NULL, src2, 0));
+	printf("ft_strlcat:%lu\n", ft_strlcat(NULL, src1, 0));
+	
+	// char buf1[7] = {'a', 'b', 'c', '\0'};
+	// char buf2[7] = {'a', 'b', 'c', '\0'};
+	// printf("strlcat: %lu\n", strlcat(buf1, "abcdef", 2));
+	// printf("strlcat: %s\n", buf1);
+	// printf("strlcat: %lu\n", ft_strlcat(buf2, "abcdef", 2));
+	// printf("strlcat: %s\n", buf2);
 }
 
 void ft_toupper_checker(int c)
@@ -295,7 +305,7 @@ int main(int argc, char *argv[])
 		// ft_memcpy_checker(argv[1], argv[2], atoi(argv[3]));
 		// ft_memmove_checker(argv[1]);
 		// ft_strlcpy_checker(argv[1]);
-		// ft_strlcat_checker(argv[1]);
+		ft_strlcat_checker(argv[1]);
 		// ft_toupper_checker(argv[1][0]);
 		// ft_tolower_checker(argv[1][0]);
 		// ft_strchr_checker(argv[1][0]);
@@ -319,7 +329,7 @@ int main(int argc, char *argv[])
 		// ft_putchar_fd_checker(argv[1][0], atoi(argv[2]));
 		// ft_putstr_fd_checker(argv[1], atoi(argv[2]));
 		// ft_putendl_fd_checker(argv[1], atoi(argv[2]));
-		ft_putnbr_fd_checker(atoi(argv[1]), atoi(argv[2]));
+		// ft_putnbr_fd_checker(atoi(argv[1]), atoi(argv[2]));
 	}
 	return (0);
 }
