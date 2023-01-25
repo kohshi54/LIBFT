@@ -1,7 +1,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-size_t count_digit(int n)
+static size_t count_digit(int n)
 {
 	size_t count;
 
@@ -18,6 +18,7 @@ size_t count_digit(int n)
 	}
 	return (count);
 }
+
 char *ft_itoa(int n)
 {
 	char *num;

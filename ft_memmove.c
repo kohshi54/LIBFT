@@ -9,11 +9,11 @@ void *ft_memmove(void *dst, const void *src, size_t len)
 		while(len--)
 			*(unsigned char*)dst++ = *(unsigned char*)src++;
 	else
-		while(len--)
-		{
-			dst += len;
-			src += len;
+	{
+		dst += len - 1;
+		src += len - 1;
+		while (len--)
 			*(unsigned char*)dst-- = *(unsigned char*)src--;
-		}
+	}
 	return (tmp);
 }

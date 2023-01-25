@@ -6,79 +6,14 @@
 /*   By: kohshi54 <kohshi54@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:18:58 by kohshi54          #+#    #+#             */
-/*   Updated: 2023/01/19 13:13:08 by kohshi54         ###   ########.fr       */
+/*   Updated: 2023/01/25 19:42:36 by kohshi54         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-#include <stdio.h>
-
-// size_t count_element(char const *s, char c)
-// {
-// 	size_t count;
-// 	char *start;
-
-// 	count = 0;
-// 	while (*s)
-// 	{
-// 		start = (char*)s;
-// 		while (*s != c && *s != '\0')
-// 			s++;
-// 		if (s == start)
-// 		{
-// 			s++;
-// 			continue;
-// 		}
-// 		count++;
-// 		if (*s == '\0')
-// 			return (count);
-// 		s++;
-// 	}
-// 	return (count);
-// }
-// #include <stdio.h>
-// char **ft_split(char const *s, char c)
-// {
-// 	char **p;
-// 	char **tmp;
-// 	char  *start;
-
-// 	p = malloc(sizeof(char*) * count_element(s, c) + 1);
-// 	if (!p)
-// 		return (NULL);
-// 	tmp = p;
-// 	while (*s)
-// 	{
-// 		start = (char *)s;
-// 		while (*s != c && *s != '\0')
-// 			s++;
-// 		if (s == start)
-// 		{
-// 			s++;
-// 			continue;
-// 		}
-// 		*p = malloc(sizeof(char *) * (s - start + 1));
-// 		if (p)
-// 		{
-// 			while (*tmp != start)
-// 				free(*tmp++);
-// 			free(tmp);
-// 			return (NULL);
-// 		}
-// 		ft_strlcpy(*p, start, (s - start + 1));
-// 		p++;
-// 		if (*s == '\0')
-// 			break;
-// 		s++;
-// 	}
-// 	*p = NULL;
-// 	return (tmp);
-// }
-
-
-size_t count_element(char const *s, char c)
+static size_t count_element(char const *s, char c)
 {
 	size_t count;
 	size_t i;
@@ -104,7 +39,7 @@ size_t count_element(char const *s, char c)
 	return (count);
 }
 
-void free_all(char **p, size_t i)
+static void free_all(char **p, size_t i)
 {
 	size_t count;
 
