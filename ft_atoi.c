@@ -1,35 +1,46 @@
+#include "libft.h"
+#include <ctype.h>
+#include <stddef.h>
+#include <limits.h>
+#include <stdio.h>
+#include <stdbool.h>
+
 int ft_atoi(const char *str)
 {
-	// return (int)strtol(str, (char **)NULL, 10);
-	size_t neg_flg;
-	unsigned long num;
+	size_t flg;
+	long num;
 
-	neg_flg = 0;
+	flg = 0;
 	num = 0;
 	while (isspace(*str))
 		str++;
 	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
-			neg_flg = 1;
+			flg = 1;
 		str++;
 	}
 	while (isdigit(*str))
 	{
+		if (flg)
+		{
+			if (num > (LONG_MIN/10) * -1)
+				return ((int)LONG_MIN);
+			else if (num == ((LONG_MIN/10) * -1) && (*str - '0') > (LONG_MIN%10)*-1)
+				return ((int)LONG_MIN);
+		}
+		else
+		{
+			if (num > (LONG_MAX/10))
+				return ((int)LONG_MAX);
+			else if (num == (LONG_MAX/10) && (*str - '0') > (LONG_MAX%10))
+				return ((int)LONG_MAX);
+		}
 		num = (num * 10) + (*str - '0');
 		str++;
-		printf("num: %lu\n", num);
 	}
-	if (num > LONG_MAX)
-	{
-		if (neg_flg)
-			return ((int)LONG_MIN);
-		else
-			return ((int)LONG_MAX);
-	}
-	if (neg_flg)
-	{
-		return (-num);
-	}
-	return (num);
+	if (flg)
+		return ((int)num * (-1));
+	else
+		return ((int)num);
 }
