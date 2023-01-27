@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/27 12:02:25 by kyamaguc          #+#    #+#             */
+/*   Updated: 2023/01/27 12:02:58 by kyamaguc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stddef.h>
 #include <stdlib.h>
 
-static size_t count_digit(int n)
+static size_t	count_digit(int n)
 {
-	size_t count;
+	size_t	count;
 
 	count = 1;
 	if (n < 0)
@@ -19,10 +31,10 @@ static size_t count_digit(int n)
 	return (count);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char *num;
-	size_t count;
+	char	*num;
+	size_t	count;
 
 	if (n == -2147483648)
 		return ("-2147483648");
@@ -41,6 +53,6 @@ char *ft_itoa(int n)
 		num[count--] = (n % 10) + '0';
 		n /= 10;
 	}
-	num[count] = (n % 10) +'0';
+	num[count] = (n % 10) + '0';
 	return (num);
 }

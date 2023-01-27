@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/27 11:48:42 by kyamaguc          #+#    #+#             */
+/*   Updated: 2023/01/27 11:50:11 by kyamaguc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include "libft.h"
 #include <stdbool.h>
 
-static bool check(char s1, char const *set)
+static bool	check(char s1, char const *set)
 {
 	while (*set)
 		if (s1 == *set++)
@@ -10,14 +22,14 @@ static bool check(char s1, char const *set)
 	return (0);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t i;
-	size_t j;
-	char *p;
-	
+	size_t	i;
+	size_t	j;
+	char	*p;
+
 	if (ft_strlen(set) == 0)
-		return ((char*)s1);
+		return ((char *)s1);
 	i = 0;
 	while (check(s1[i], set))
 		i++;
