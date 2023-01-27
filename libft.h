@@ -6,12 +6,12 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 14:26:09 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/27 14:29:55 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/27 14:32:31 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-# define LIBT_H
+# define LIBFT_H
 # include <stddef.h>
 
 int		ft_isalpha(int c);
