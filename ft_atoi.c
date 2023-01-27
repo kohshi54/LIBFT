@@ -6,7 +6,7 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 12:37:11 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/27 12:56:41 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/27 15:12:43 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,6 @@ static bool	overflow_max_checker(long num, const char *str)
 	return (0);
 }
 
-// static char overflow_checker(long num, const char *str, char neg_flg)
-// {
-// 	if (neg_flg == -1)
-// 		if (overflow_min_checker(num, str))
-			
-// 	return (0);
-// }
-
-// check the output of original function later.
 static int	ft_isspace(int c)
 {
 	if ((c == '\t') || (c == '\n') || (c == '\v') \
