@@ -6,7 +6,7 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 14:49:39 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/27 14:49:56 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/27 20:36:04 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 #include <stdlib.h>
 #include <errno.h>
 #include <stdbool.h>
+#include <limits.h>
 
 static bool	overflow_checker(size_t count, size_t size)
 {
-	if (count * size < (count * (size - 1)))
+	if ((SIZE_MAX / size) < count)
 		return (1);
 	return (0);
 }

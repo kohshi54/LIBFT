@@ -6,7 +6,7 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:51:21 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/27 11:51:50 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/27 23:55:22 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 	s1_tmp = (unsigned char *)s1;
 	s2_tmp = (unsigned char *)s2;
-	while (n--)
+	while (n-- && (*s1_tmp || *s2_tmp))
 	{
 		if (*s1_tmp || *s2_tmp)
 			if (*s1_tmp != *s2_tmp)

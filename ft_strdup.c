@@ -6,7 +6,7 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:54:28 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/27 11:54:36 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/27 23:56:51 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s1)
 {
 	char	*p;
 
-	p = malloc(sizeof(char) * ft_strlen(s1));
+	p = malloc(sizeof(char) * ft_strlen(s1) + 1);
 	if (!p)
 	{
 		errno = ENOMEM;
