@@ -6,7 +6,7 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:57:18 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/28 00:16:23 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/28 22:17:06 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	void	*head;
 
+	if (!dst && !src)
+		return (NULL);
 	head = dst;
 	if (src >= dst)
 	{
@@ -31,3 +33,13 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (head);
 }
+
+
+// #include <stdio.h>
+// #include <string.h>
+// int main(void)
+// {
+// 	printf("%p\n", memmove(NULL, NULL, 1));
+// 	printf("%p\n", ft_memmove(NULL, NULL, 1));
+// 	return (0);
+// }

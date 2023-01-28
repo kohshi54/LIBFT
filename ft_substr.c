@@ -6,13 +6,12 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:48:06 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/28 20:44:44 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/28 20:46:14 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
-
 #include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
