@@ -6,7 +6,7 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:48:42 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/28 00:11:56 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/28 19:22:53 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	j;
 	char	*p;
 
-	if (ft_strlen(set) == 0)
-		return ((char *)s1);
+	// if (ft_strlen(set) == 0)
+	// 	return ((char *)s1);
 	i = 0;
 	while (check(s1[i], set))
 		i++;
 	j = ft_strlen(s1) - 1;
-	while (check(s1[j], set))
+	while (check(s1[j], set) && (i < j))
 		j--;
 	p = malloc(sizeof(char) * (j - i + 2));
 	if (!p)

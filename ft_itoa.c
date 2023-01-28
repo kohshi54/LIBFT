@@ -6,14 +6,15 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 12:02:25 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/28 00:04:35 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/28 19:41:55 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stddef.h>
 #include <stdlib.h>
 
-static size_t	count_digit(int n)
+static size_t	count_digit(long n)
 {
 	size_t	count;
 
@@ -37,7 +38,11 @@ char	*ft_itoa(int n)
 	size_t	count;
 
 	if (n == -2147483648)
-		return ("-2147483648");
+	{
+		num = malloc(sizeof(char) * (11 + 1));
+		ft_strlcpy(num, "-2147483648", 12);
+		return (num);
+	}
 	count = count_digit(n);
 	num = malloc(sizeof(char) * (count + 1));
 	if (!num)
