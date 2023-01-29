@@ -6,7 +6,7 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:55:33 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/29 12:35:13 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/29 14:31:08 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,6 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)
 		return ;
-	write(fd, s, ft_strlen(s));
+	while (*s)
+		ft_putchar_fd(*s++, fd);
 }

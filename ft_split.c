@@ -6,7 +6,7 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:18:58 by kohshi54          #+#    #+#             */
-/*   Updated: 2023/01/29 12:48:44 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/29 13:55:09 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@ static size_t	count_element(char const *s, char c)
 {
 	size_t	count;
 	size_t	i;
-	size_t	j;
+	size_t	start;
 
 	count = 0;
 	i = 0;
 	while (s[i] != '\0')
 	{
-		j = i;
+		start = i;
 		while (s[i] != c && s[i] != '\0')
 			i++;
-		if (i == j)
+		if (i == start)
 		{
 			i++;
 			continue ;
@@ -38,13 +38,13 @@ static size_t	count_element(char const *s, char c)
 	return (count);
 }
 
-static void	*free_all(char **p, size_t i)
+static void	*free_all(char **p, size_t count)
 {
-	size_t	count;
+	size_t	i;
 
-	count = 0;
-	while (count < i)
-		free(p[count++]);
+	i = 0;
+	while (i < count)
+		free(p[i++]);
 	free(p);
 	return (NULL);
 }
@@ -52,10 +52,10 @@ static void	*free_all(char **p, size_t i)
 char	**my_split(const char *s, char c, char **p, size_t start)
 {
 	size_t	i;
-	size_t	j;
+	size_t	count;
 
 	i = 0;
-	j = 0;
+	count = 0;
 	while (s[i] != '\0')
 	{
 		start = i;
@@ -66,15 +66,15 @@ char	**my_split(const char *s, char c, char **p, size_t start)
 			i++;
 			continue ;
 		}
-		p[j] = malloc(sizeof(char) * (i - start + 1));
+		p[count] = malloc(sizeof(char) * (i - start + 1));
 		if (!p)
-			return (free_all(p, j));
-		ft_strlcpy(p[j], &s[start], (i - start + 1));
-		j++;
+			return (free_all(p, count));
+		ft_strlcpy(p[count], &s[start], (i - start + 1));
+		count++;
 		if (s[i++] == '\0')
 			break ;
 	}
-	p[j] = NULL;
+	p[count] = NULL;
 	return (&p[0]);
 }
 

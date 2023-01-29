@@ -6,7 +6,7 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 14:47:02 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/27 14:49:06 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/29 13:03:53 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,5 @@ void	ft_bzero(void *s, size_t n)
 
 	uc = (unsigned char *) s;
 	while (n--)
-	{
-		*uc = '\0';
-		uc++;
-	}
+		*uc++ = '\0';
 }

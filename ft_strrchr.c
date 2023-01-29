@@ -6,7 +6,7 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:50:24 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/29 12:36:52 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/29 14:40:16 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,15 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*tmp;
-	char	a;
 
 	tmp = NULL;
-	a = (char) c;
 	while (*s)
 	{
-		if (*s == a)
+		if (*s == (char)c)
 			tmp = (char *)s;
 		s++;
 	}
-	if (*s == a)
+	if (*s == (char)c)
 		tmp = (char *)s;
 	return (tmp);
 }
