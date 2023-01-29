@@ -6,7 +6,7 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:51:59 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/29 14:19:18 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/29 14:54:11 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	head = p;
 	while (s[i])
 	{
-		*p++ = f(i, s[i]);
+		*p++ = (*f)(i, s[i]);
 		i++;
 	}
 	*p = '\0';
