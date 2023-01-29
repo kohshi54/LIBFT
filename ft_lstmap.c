@@ -6,7 +6,7 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 12:00:11 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/27 12:00:20 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/29 12:42:07 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	head = NULL;
 	while (lst)
 	{
-		new = ft_lstnew(f(lst->content));
+		new = ft_lstnew((*f)(lst->content));
 		if (!new)
 		{
 			ft_lstclear(&head, del);

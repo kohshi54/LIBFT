@@ -6,11 +6,11 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:51:21 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/27 23:55:22 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/29 12:36:38 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

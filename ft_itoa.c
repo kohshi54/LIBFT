@@ -6,13 +6,11 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 12:02:25 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/28 19:41:55 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/29 12:56:19 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
-#include <stdlib.h>
 
 static size_t	count_digit(long n)
 {
@@ -32,17 +30,24 @@ static size_t	count_digit(long n)
 	return (count);
 }
 
+char	*int_min_gen(void)
+{
+	char	*num;
+
+	num = malloc(sizeof(char) * (11 + 1));
+	if (!num)
+		return (NULL);
+	ft_strlcpy(num, "-2147483648", 12);
+	return (num);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*num;
 	size_t	count;
 
-	if (n == -2147483648)
-	{
-		num = malloc(sizeof(char) * (11 + 1));
-		ft_strlcpy(num, "-2147483648", 12);
-		return (num);
-	}
+	if (n == INT_MIN)
+		return (int_min_gen());
 	count = count_digit(n);
 	num = malloc(sizeof(char) * (count + 1));
 	if (!num)

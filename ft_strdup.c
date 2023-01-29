@@ -6,13 +6,11 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:54:28 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/27 23:56:51 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/29 12:35:32 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <errno.h>
 
 char	*ft_strdup(const char *s1)
 {

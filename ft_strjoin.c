@@ -6,11 +6,10 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:53:36 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/27 11:53:52 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/29 12:36:09 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -18,6 +17,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*p;
 	char	*tmp;
 
+	if (!s1 || !s2)
+		return (NULL);
 	p = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!p)
 		return (NULL);

@@ -6,11 +6,11 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:56:33 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/27 11:56:38 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/29 12:34:37 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

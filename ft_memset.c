@@ -6,7 +6,7 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:56:50 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/27 11:57:02 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/29 12:40:41 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	unsigned char	*uc;
 
 	uc = (unsigned char *) b;
-	while (len)
-	{
-		*uc = c;
-		uc++;
-		len--;
-	}
+	while (len--)
+		*uc++ = c;
 	return (b);
 }

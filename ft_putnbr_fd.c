@@ -6,15 +6,11 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:55:59 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/28 20:42:39 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/29 12:35:05 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
-#include <stdlib.h>
-#include <stddef.h>
-#include <limits.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {

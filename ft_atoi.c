@@ -6,14 +6,11 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 12:37:11 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/27 15:12:43 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/29 12:31:26 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
-#include <limits.h>
-#include <stdbool.h>
 
 static bool	overflow_min_checker(long num, const char *str)
 {

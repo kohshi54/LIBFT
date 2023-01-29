@@ -6,11 +6,11 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:58:51 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/27 11:58:57 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/29 12:34:07 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

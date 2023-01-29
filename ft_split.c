@@ -6,11 +6,10 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:18:58 by kohshi54          #+#    #+#             */
-/*   Updated: 2023/01/27 15:01:56 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/29 12:48:44 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static size_t	count_element(char const *s, char c)
@@ -85,6 +84,8 @@ char	**ft_split(char const *s, char c)
 	size_t	start;
 
 	start = 0;
+	if (!s)
+		return (NULL);
 	p = malloc(sizeof(char *) * (count_element(s, c) + 1));
 	if (!p)
 		return (NULL);

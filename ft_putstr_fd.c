@@ -6,14 +6,15 @@
 /*   By: kyamaguc <kyamaguc@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:55:33 by kyamaguc          #+#    #+#             */
-/*   Updated: 2023/01/27 11:55:38 by kyamaguc         ###   ########.fr       */
+/*   Updated: 2023/01/29 12:35:13 by kyamaguc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	write(fd, s, ft_strlen(s));
 }
